@@ -33,3 +33,7 @@ def get_expiry_date():
         expiry_datetime = datetime.combine(expiry_date.date(), expiry_time)
         return expiry_datetime.strftime("%Y-%m-%d %H:%M:00")
 
+def format_expiry_date(input_str):
+    dt_obj = datetime.strptime(input_str, "%Y-%m-%d %H:%M:%S")
+
+    return dt_obj.strftime("%d %B %Y %H:%M:%S")

@@ -9,11 +9,14 @@ CREATE TABLE users (
 
 CREATE TABLE coupons (
     coupon_id INT AUTO_INCREMENT PRIMARY KEY,
+    coupon_name VARCHAR(100) NOT NULL,
     code VARCHAR(50) UNIQUE NOT NULL,
     discount_pct INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     expiry_date DATETIME NOT NULL,
-    is_active BOOLEAN DEFAULT TRUE
+    is_active BOOLEAN DEFAULT TRUE,
+    purchased_by_user_id INT NULL,
+    FOREIGN KEY (purchased_by_user_id) REFERENCES users(user_id)
 );
 
 

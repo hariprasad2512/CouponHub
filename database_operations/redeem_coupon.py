@@ -16,12 +16,13 @@ def redeem_coupon(email, code):
             user = cursor.fetchone()
             
             fetch_coupon_id_query = """SELECT coupon_id FROM coupons
-                                    WHERE code = %s AND expiry_date >= NOW() AND is_active = TRUE """
+                                    WHERE code = %s AND expiry_date >= NOW()"""
             cursor.execute(fetch_coupon_id_query, (code,))
             coupon = cursor.fetchone()
             
             if not user or not coupon:
                 print(f"{CRED}Redemption Failed: Invalid User or Expired Coupon{CEND}")
+                return
             
             # Verify Ownership if User bought that coupon ID or not
             
