@@ -36,11 +36,11 @@ def main():
                database_operations.create_coupon(coupon_name=coupon_name, code=code, discount_pct=discount, price=price, expiry_date=expiry)
                print()
            case '3':
-               print("\n\t\t AVAILABLE COUPONS \n")
+               print("\n\t\t AVAILABLE COUPONS in the Market Right Now \n")
                database_operations.view_all_coupons()
                 
            case '4':
-               print("\n\t\tYOUR UNREDEEMED COUPONS\n")
+               print("\n\t\t Your Available Coupons (Unredeemed) \n")
                email = input("Enter your email: ")
                database_operations.view_your_coupons(email=email)
                print()

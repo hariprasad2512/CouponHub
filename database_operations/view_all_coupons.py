@@ -20,14 +20,15 @@ def view_all_coupons():
                 cursor.execute(query=query)
                 coupons = cursor.fetchall()
                 print()
-                print("Coupon Name\tCoupon Code\tPrice\tExpiry Date")
+                print(f"{"Coupon Name":<30} {"Coupon Code":<15} {"Price":<8} {"Expiry Date"}")
                 if not coupons:
                     print(f'{CRED}No Coupons Available Right now!{CEND}')
                 for coupon in coupons:
                     expiry_date_formatted = format_expiry_date(str(coupon['expiry_date']))
                     print(
-                        f"{coupon['coupon_name']:<20}{coupon['code']:<15}"
+                        f"{coupon['coupon_name']:<30}{coupon['code']:<15}"
                         f"{coupon['price']:<8} {expiry_date_formatted}"
                     )
+                    print()
             except Exception as e:
                 print(f'{CRED}Error: ${e}{CEND}')

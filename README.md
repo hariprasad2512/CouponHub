@@ -6,7 +6,7 @@ CouponHub helps manage Coupons, their Redeem Statuses and Transactions linked wi
 
 ## Working of CouponHub
 
-![CouponHub Screenshot](<./screenshots/Screenshot 2026-09-06 at 20.30.20.png>)
+![CouponHub Screenshot](<./screenshots/Screenshot 2026-09-06 at 22.50.00.png>)
 
 ## Setup Instructions
 1. Clone this repository.
@@ -16,5 +16,5 @@ CouponHub helps manage Coupons, their Redeem Statuses and Transactions linked wi
 5. Run the application: `python main.py`
 
 ## Database Schema of CouponHub
-![Database Schema](<./screenshots/Database Schema of CouponHub.png>)
+![Database Schema](<./screenshots/CouponHub Data Model.png>)
 
