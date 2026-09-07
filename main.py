@@ -15,7 +15,7 @@ def main():
         print("\t\t6. Redeem a Coupon")
         print("\t\t7. Exit\n\n")
         
-        choice = input("Enter your Choice (1-5):  ")
+        choice = input("Enter your Choice (1-7):  ")
         
         match choice:
            case '1':
@@ -67,7 +67,7 @@ def main():
                print()
                break
            case _:
-               print("\t\tOOPS. Invalid Input. Please enter a number from 1 to 5.") 
+               print("\t\tOOPS. Invalid Input. Please enter a number from 1 to 7.") 
 
 
 main()
